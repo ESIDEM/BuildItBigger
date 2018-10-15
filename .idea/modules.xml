@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FinalProject.iml" filepath="$PROJECT_DIR$/FinalProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidlibrary/androidlibrary.iml" filepath="$PROJECT_DIR$/androidlibrary/androidlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/free/free.iml" filepath="$PROJECT_DIR$/free/free.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java libary/java libary.iml" filepath="$PROJECT_DIR$/java libary/java libary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib100/lib100.iml" filepath="$PROJECT_DIR$/lib100/lib100.iml" />
+    </modules>
+  </component>
+</project>
