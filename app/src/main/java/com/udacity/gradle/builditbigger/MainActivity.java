@@ -8,15 +8,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import ng.com.techdepo.androidlibrary.JokeActivity;
 
 public class MainActivity extends AppCompatActivity implements JokeOutput{
 
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
     }
 
 
@@ -44,8 +49,7 @@ public class MainActivity extends AppCompatActivity implements JokeOutput{
 
     public void tellJoke(View view) {
 
-        //JokeProvider jokeProvider = new JokeProvider();
-        //Toast.makeText(this, jokeProvider.getJoke(), Toast.LENGTH_SHORT).show();
+       progressBar.setVisibility(View.VISIBLE);
         new EndpointsAsyncTask().execute(this);
     }
 
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements JokeOutput{
 
     @Override
     public void processFinish(String output) {
+
+        progressBar.setVisibility(View.GONE);
 
         Intent intent = new Intent(getApplicationContext(), JokeActivity.class);
         intent.putExtra("joke",output);
