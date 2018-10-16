@@ -31,9 +31,10 @@ public class AndroidJokeTest extends ApplicationTestCase<Application> implements
             new EndpointsAsyncTask().execute(this);
             countDownLatch.await(10, TimeUnit.SECONDS);
             assertNotNull("joke is null", joke);
-            assertFalse("joke is empty", joke.isEmpty());
+
         } catch (Exception ex) {
 
+            assertFalse("joke is empty", joke.isEmpty());
             Log.d("task ", ex.getMessage(),ex);
 
         }
