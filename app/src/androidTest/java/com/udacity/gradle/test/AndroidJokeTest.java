@@ -34,8 +34,11 @@ public class AndroidJokeTest extends ApplicationTestCase<Application> implements
 
         } catch (Exception ex) {
 
-            assertFalse("joke is empty", joke.isEmpty());
+            if (ex.getMessage().equals(joke)){
+                assertFalse("joke is empty", joke.isEmpty());
+            }
             Log.d("task ", ex.getMessage(),ex);
+
 
         }
     }
